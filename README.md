@@ -51,3 +51,14 @@ sort --key 6 -gr  QC/chrAll.ASA.imiss | head
   11                  rs1580873      336     1012    0.332
   15                 kgp8838271      333     1012   0.3291
 ```
+2. Sex mismatch
+```bash
+~/Programs/plink --bfile chrAll.ASA --check-sex ycount 0.2 0.8 40 --out QC/chrAll.ASA
+
+egrep PROBLEM QC/chrAll.ASA.sexcheck
+  CHSHet002   CHSHet002            1            0      PROBLEM       0.6763      804
+    id1_300     id2_300            1            2      PROBLEM      0.03288        2
+    id1_301     id2_301            2            1      PROBLEM            1      802
+    id1_500     id2_500            1            2      PROBLEM     0.008734        2
+    id1_501     id2_501            2            1      PROBLEM            1      805
+```
