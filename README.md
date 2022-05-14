@@ -26,4 +26,17 @@
 1. Missingness
 ```bash
 ~/Programs/plink --bfile chrAll.ASA --missing --out QC/chrAll.ASA
+
+sort --key 6 -gr  QC/chrAll.ASA.imiss | head
+    id1_382     id2_382          N    92781   481283   0.1928
+    id1_944     id2_944          N    71370   481283   0.1483
+    id1_671     id2_671          N    61587   482088   0.1278
+    id1_563     id2_563          N    48433   481283   0.1006
+    id1_875     id2_875          N    36187   482088  0.07506
+    id1_220     id2_220          N    27181   481283  0.05648
+    id1_500     id2_500          N     5957   482088  0.01236
+    id1_300     id2_300          N     5836   482088  0.01211
+    id1_826     id2_826          N     2782   481283  0.00578
+  CHSHet002   CHSHet002          N     1861   482088  0.00386
+
 ```
