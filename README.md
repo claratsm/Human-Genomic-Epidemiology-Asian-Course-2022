@@ -3,8 +3,7 @@
 ## Genotyping data for GWAS
 
 1. PLINK binary data (Illumina ASA array)
-2. 1000Genomes data (for PCA plot)
-- Converted from vcf files from 1000 Genomes 
+2. 1000Genomes data (for PCA plot) converted from vcf files from 1000 Genomes 
 
 ## Simulation
 1. ~1000 samples simulated from haplotypes of 1000 Geomes CHB and CHS samples using [HAPGEN2](https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html)
