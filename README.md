@@ -22,3 +22,4 @@
 5. CNV (CHSTri21, CHSDel)
 6. Relatedness (CHSQUAD)
 
+~/Programs/plink --bfile chrAll.ASA --missing --out QC/chrAll.ASA
