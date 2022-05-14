@@ -72,10 +72,25 @@ sort --key 6 -gr  QC/chrAll.ASA.pruned.het | head
     id1_510     id2_510        46268    4.591e+04        67179       0.0168
  
  sort --key 6 -gr  QC/chrAll.ASA.pruned.het | tail
-    id1_453     id2_453        45564    4.592e+04        67186     -0.01651
-    id1_323     id2_323        45562    4.591e+04        67184     -0.01652
-    id1_563     id2_563        40800    4.113e+04        60186     -0.01732
     id1_583     id2_583        45486    4.591e+04        67183     -0.02004
    CHSHet01    CHSHet01        44968    4.592e+04        67195     -0.04481
-   
+  CHS-ITU_1   CHS-ITU_1        44825    4.592e+04        67195     -0.05153
+  CHS-BEB_1   CHS-BEB_1        44817    4.592e+04        67195     -0.05191
+  CHS-CEU_1   CHS-CEU_1        44550    4.592e+04        67195     -0.06446
+  CHSHet002   CHSHet002        41372    4.592e+04        67195      -0.2138
+```
+4. Relatedness
+```bash
+~/Programs/plink --bfile chrAll.ASA --extract QC/chrAll.ASA.prune.in --genome --out QC/chrAll.ASA.pruned
+
+sort --key 12 -gr QC/chrAll.ASA.pruned.genome | head
+    CHSQUAD         C1    CHSQUAD         C2 OT     0  0.2423  0.4298  0.3279  0.5428  -1  0.870124  1.0000 11.0616
+    CHSQUAD         C2    CHSQUAD         F1 OT     0  0.0000  0.9851  0.0149  0.5075  -1  0.843984  1.0000      NA
+    CHSQUAD         C1    CHSQUAD         F1 OT     0  0.0000  0.9875  0.0125  0.5062  -1  0.843597  1.0000      NA
+    CHSQUAD         C1    CHSQUAD         M1 OT     0  0.0000  0.9932  0.0068  0.5034  -1  0.842704  1.0000      NA
+    CHSQUAD         C2    CHSQUAD         M1 OT     0  0.0000  0.9946  0.0054  0.5027  -1  0.842481  1.0000      NA
+  BEB-BEB_1  BEB-BEB_1  CHS-BEB_1  CHS-BEB_1 UN    NA  0.0000  1.0000  0.0000  0.5000  -1  0.834296  1.0000      NA
+    id1_245    id2_245    id1_834    id2_834 UN    NA  0.9537  0.0341  0.0122  0.0293  -1  0.751325  0.9736  2.1466
+ ```
+ 
 
