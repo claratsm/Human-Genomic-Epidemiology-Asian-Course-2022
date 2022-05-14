@@ -8,6 +8,7 @@
 
 ## Simulation
 1. ~1000 samples simulated from haplotypes of 1000 Geomes CHB and CHS samples using [HAPGEN2](https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html)
+2. Binary (497 cases + 501 controls, 6 missing) phenotypes simulated using GCTA with hsq=0.8 and K=0.5
 
 ## Software
 - [PLINK](https://www.cog-genomics.org/plink2/) 1.9 beta
