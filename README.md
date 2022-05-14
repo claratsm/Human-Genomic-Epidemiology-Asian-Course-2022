@@ -16,5 +16,9 @@
 
 ## Simulated samples with varying QC problems
 1. Missingness
-2. 
+2. Sex mismatch (id2_300,id2_301,id2_500,id2_501)
+3. Heterozygosity (CHSHet002, CHSHet01)
+4. Non-East asian ancestry / admixture (BEB-BEB_1, CHS-BEB_1, CHS-CEU_1, CHS-ITU_1)
+5. CNV (CHSTri21, CHSDel)
+6. Relatedness (CHSQUAD)
 
