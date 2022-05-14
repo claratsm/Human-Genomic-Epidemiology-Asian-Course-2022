@@ -98,5 +98,11 @@ sort --key 12 -gr QC/chrAll.ASA.pruned.genome | head
   BEB-BEB_1  BEB-BEB_1  CHS-BEB_1  CHS-BEB_1 UN    NA  0.0000  1.0000  0.0000  0.5000  -1  0.834296  1.0000      NA
     id1_245    id2_245    id1_834    id2_834 UN    NA  0.9537  0.0341  0.0122  0.0293  -1  0.751325  0.9736  2.1466
  ```
- 
+5. Validation of ancestry
+```bash
+~/Programs/plink --bfile chrAll.ASA --update-name ASA.1000G.to-update-name.snp --make-bed --out chrAll.ASA.id-1000G
+~/Programs/plink --bfile chrAll.ASA.id-1000G --bmerge chrAll.ASA.1000GP-All --geno 0.05 --make-bed --out merged.chrAll.ASA.1000G
+~/Programs/plink --bfile merged.chrAll.ASA.1000G --maf 0.05 --hwe 1e-5 --geno 0.05 --indep-pairwise 200 50 0.1 --out merged.chrAll.ASA.1000G
+~/Programs/plink --bfile merged.chrAll.ASA.1000G --extract merged.chrAll.ASA.1000G.prune.in --pca 3 --out merged.chrAll.ASA.1000G.pruned
+```
 
