@@ -8,7 +8,7 @@
 
 ## Simulation
 1. ~1000 samples simulated from haplotypes of 1000 Geomes CHB and CHS samples using [HAPGEN2](https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html)
-2. Binary (497 cases + 501 controls, 6 missing) phenotypes simulated using GCTA with hsq=0.8 and K=0.5
+2. Binary (497 cases + 501 controls, 6 missing) phenotypes simulated using [GCTA](https://yanglab.westlake.edu.cn/software/gcta/#GWASSimulation) with hsq=0.8 and K=0.5
 
 ## Software
 - [PLINK](https://www.cog-genomics.org/plink2/) 1.9 beta
@@ -106,4 +106,7 @@ sort --key 12 -gr QC/chrAll.ASA.pruned.genome | head
 ~/Programs/plink --bfile merged.chrAll.ASA.1000G --maf 0.05 --hwe 1e-5 --geno 0.05 --indep-pairwise 200 50 0.1 --out merged.chrAll.ASA.1000G
 ~/Programs/plink --bfile merged.chrAll.ASA.1000G --extract merged.chrAll.ASA.1000G.prune.in --pca 3 --out merged.chrAll.ASA.1000G.pruned
 ```
-
+6. Association
+```bash
+~/Programs/plink --bfile chrAll.ASA --remove QCneg.to-remove.indiv --maf 0.01 --geno 0.05 --hwe 1e-5 --assoc --adjust --out assoc/chrAll.ASA.QCpos.binary
+```
