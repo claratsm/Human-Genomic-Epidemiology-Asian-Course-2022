@@ -8,8 +8,6 @@
 
 ## Simulation
 1. ~1000 samples simulated from haplotypes of 1000 Geomes CHB and CHS samples using [HAPGEN2](https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html)
-2. 
-
 
 ## Software
 - [PLINK](https://www.cog-genomics.org/plink2/) 1.9 beta
@@ -19,8 +17,8 @@
 2. Sex mismatch (id2_300,id2_301,id2_500,id2_501)
 3. Heterozygosity (CHSHet002, CHSHet01)
 4. Non-East asian ancestry / admixture (BEB-BEB_1, CHS-BEB_1, CHS-CEU_1, CHS-ITU_1)
-5. CNV (CHSTri21, CHSDel)
-6. Relatedness (CHSQUAD)
+5. Relatedness (CHSQUAD)
+6. CNV (CHSTri21, CHSDel)
 
 ## Testing commands
 1. Missingness
@@ -62,3 +60,22 @@ egrep PROBLEM QC/chrAll.ASA.sexcheck
     id1_500     id2_500            1            2      PROBLEM     0.008734        2
     id1_501     id2_501            2            1      PROBLEM            1      805
 ```
+3. Heterozygosity
+```bash
+~/Programs/plink --bfile chrAll.ASA --autosome --maf 0.05 --hwe 1e-5 --geno 0.02 --indep-pairwise 200 50 0.1 --out QC/chrAll.ASA
+~/Programs/plink --bfile chrAll.ASA --extract QC/chrAll.ASA.prune.in --het --out QC/chrAll.ASA.pruned
+
+sort --key 6 -gr  QC/chrAll.ASA.pruned.het | head
+     CHSDel      CHSDel        47030    4.592e+04        67195      0.05212
+  BEB-BEB_1   BEB-BEB_1        46796    4.592e+04        67195      0.04112
+    id1_430     id2_430        46315    4.591e+04        67183      0.01886
+    id1_510     id2_510        46268    4.591e+04        67179       0.0168
+ 
+ sort --key 6 -gr  QC/chrAll.ASA.pruned.het | tail
+    id1_453     id2_453        45564    4.592e+04        67186     -0.01651
+    id1_323     id2_323        45562    4.591e+04        67184     -0.01652
+    id1_563     id2_563        40800    4.113e+04        60186     -0.01732
+    id1_583     id2_583        45486    4.591e+04        67183     -0.02004
+   CHSHet01    CHSHet01        44968    4.592e+04        67195     -0.04481
+   
+
