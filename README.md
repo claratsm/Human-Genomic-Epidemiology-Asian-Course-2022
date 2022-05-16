@@ -101,15 +101,18 @@ sort --key 12 -gr QC/chrAll.ASA.pruned.genome | head
 #    CHSQUAD         C2    CHSQUAD         M1 OT     0  0.0000  0.9946  0.0054  0.5027  -1  0.842481  1.0000      NA
 #  BEB-BEB_1  BEB-BEB_1  CHS-BEB_1  CHS-BEB_1 UN    NA  0.0000  1.0000  0.0000  0.5000  -1  0.834296  1.0000      NA
 #    id1_245    id2_245    id1_834    id2_834 UN    NA  0.9537  0.0341  0.0122  0.0293  -1  0.751325  0.9736  2.1466
-![PCA plot with contaminated and non-Asian samples]()
  ```
+
 5. Validation of ancestry
+![PCA plot with contaminated and non-Asian samples](https://github.com/claratsm/Human-Genomic-Epidemiology-Asian-Course-2022/blob/fe5bc3de3eed9959106186cea2690e9c6a9261d1/Figures/ASA.1000G.pcaPlot.pc1-3.png)
 ```bash
 ~/Programs/plink --bfile chrAll.ASA --update-name ASA.1000G.to-update-name.snp --make-bed --out chrAll.ASA.id-1000G
 ~/Programs/plink --bfile chrAll.ASA.id-1000G --bmerge chrAll.ASA.1000GP-All --geno 0.05 --make-bed --out merged.chrAll.ASA.1000G
 ~/Programs/plink --bfile merged.chrAll.ASA.1000G --maf 0.05 --hwe 1e-5 --geno 0.05 --indep-pairwise 200 50 0.1 --out merged.chrAll.ASA.1000G
 ~/Programs/plink --bfile merged.chrAll.ASA.1000G --extract merged.chrAll.ASA.1000G.prune.in --pca 3 --out merged.chrAll.ASA.1000G.pruned
 ```
+![PCA plot for samples passing QC](https://github.com/claratsm/Human-Genomic-Epidemiology-Asian-Course-2022/blob/fe5bc3de3eed9959106186cea2690e9c6a9261d1/Figures/ASA.1000G.QCed.pcaPlot.pc1-3.png)
+
 6. Association
 ```bash
 ~/Programs/plink --bfile chrAll.ASA --remove QCneg.to-remove.indiv --maf 0.01 --geno 0.05 --hwe 1e-5 --assoc --adjust --out assoc/chrAll.ASA.QCpos.binary
