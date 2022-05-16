@@ -2,7 +2,7 @@
 
 ## Genotyping data for GWAS
 
-1. PLINK binary data (Illumina ASA array)
+1. PLINK binary data ([Illumina ASA array](https://www.illumina.com/products/by-type/microarray-kits/infinium-asian-screening.html))
 2. 1000Genomes data (for PCA plot) converted from vcf files from 1000 Genomes 
 
 ## Simulation
@@ -16,7 +16,7 @@
 
 ## Download
 - [Raw genotyping data](https://drive.google.com/file/d/1DBppyTtW5X924nHe-2SkDp359qcM_QKX/view?usp=sharing)
-  - Simulated SNP array data with reference to [Illumina ASA array](https://www.illumina.com/products/by-type/microarray-kits/infinium-asian-screening.html)
+  - Simulated SNP array data with reference to Illumina ASA array
   - 1000 Genomes data for SNPs included in Illumina ASA array
 - [Data passed QC](https://drive.google.com/file/d/1E7eAqvOrA_uJJ9d-lrSlRNUG_-Ybgu1d/view?usp=sharing)
 
