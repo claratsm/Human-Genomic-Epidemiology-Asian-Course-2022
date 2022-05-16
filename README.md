@@ -26,7 +26,7 @@
 3. Heterozygosity (CHSHet002, CHSHet01)
 4. Non-East asian ancestry / admixture (BEB-BEB_1, CHS-BEB_1, CHS-CEU_1, CHS-ITU_1)
 5. Relatedness (CHSQUAD)
-6. CNV (CHSTri21, CHSDel)
+6. CNV (CHSTri21: trimsomy 21, CHSDel: deletion of part of Chr1)
 
 ## Testing commands
 1. Missingness
