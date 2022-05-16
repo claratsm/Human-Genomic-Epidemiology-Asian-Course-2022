@@ -9,6 +9,7 @@
 1. Genotypes of Chr1-22 and X for 1000 samples simulated from haplotypes of 1000 Geomes CHB and CHS samples using [HAPGEN2](https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/hapgen2.html)
 2. ChrY genotypes (with random/missing genotypes for females) simulated based on MAF of in-house Chinese samples
 3. Binary (497 cases + 501 controls, 6 missing) phenotype simulated using [GCTA](https://yanglab.westlake.edu.cn/software/gcta/#GWASSimulation) with hsq=0.8 and K=0.5
+4. Quantitative phenotypes simulated using [GCTA](https://yanglab.westlake.edu.cn/software/gcta/#GWASSimulation) with hsq=0.5
 
 ## Software
 - [PLINK](https://www.cog-genomics.org/plink2/) 1.9 beta
