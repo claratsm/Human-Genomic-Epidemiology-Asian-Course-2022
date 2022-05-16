@@ -12,6 +12,10 @@
 ## Software
 - [PLINK](https://www.cog-genomics.org/plink2/) 1.9 beta
 
+## Download
+- [Raw genotyping data](https://drive.google.com/file/d/1DBppyTtW5X924nHe-2SkDp359qcM_QKX/view?usp=sharing)
+- [Data passed QC](https://drive.google.com/file/d/1E7eAqvOrA_uJJ9d-lrSlRNUG_-Ybgu1d/view?usp=sharing)
+
 ## Simulated samples with varying QC problems
 1. Missingness
 2. Sex mismatch (id2_300,id2_301,id2_500,id2_501)
@@ -97,6 +101,7 @@ sort --key 12 -gr QC/chrAll.ASA.pruned.genome | head
 #    CHSQUAD         C2    CHSQUAD         M1 OT     0  0.0000  0.9946  0.0054  0.5027  -1  0.842481  1.0000      NA
 #  BEB-BEB_1  BEB-BEB_1  CHS-BEB_1  CHS-BEB_1 UN    NA  0.0000  1.0000  0.0000  0.5000  -1  0.834296  1.0000      NA
 #    id1_245    id2_245    id1_834    id2_834 UN    NA  0.9537  0.0341  0.0122  0.0293  -1  0.751325  0.9736  2.1466
+![PCA plot with contaminated and non-Asian samples]()
  ```
 5. Validation of ancestry
 ```bash
