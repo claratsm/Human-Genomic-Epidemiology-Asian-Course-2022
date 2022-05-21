@@ -13,7 +13,9 @@ The QC protocol of a GWAS is usually split into two broad categories, `Sample QC
 
 ### Sample QC
 It consists of at least five steps:
-
+```{r}
+plot(x,y)
+```
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
 - SNP extracted from Illumina Asian Screening array
