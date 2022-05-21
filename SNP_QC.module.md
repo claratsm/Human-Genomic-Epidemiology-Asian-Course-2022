@@ -1,8 +1,12 @@
 # Sample-based and Variant-based Quality Control (QC)
 
 ## Objectives
-After completing this practical, you will learn the data quality assessment and control steps that are typically carried out during genome wide association studies (GWAS).
+In this practical, you will learn the data quality assessment and control steps that are typically carried out in genome wide association studies (GWAS).
 
+## Why do we need the QC?
+Study design, sample quality, and errors in genotype calling can introduce systematic biases into GWAS, leading to spurious associations. A thorough QC can help us identify samples and markers that should be removed prior to association analysis in order to minimize false-positive and false-negative associations.
+
+Here we assume that the study design has been conducted appropriately and `basic QC` applies to genotypes after they have been called from probe intensity data. The QC protocol of a GWAS is usually split into two broad categories, “Sample QC” and “Variant QC”. Sample QC is done prior to Variant QC because we want to maximise the number of markers remaining in the study.
 
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
