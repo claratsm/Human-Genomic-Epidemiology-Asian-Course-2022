@@ -6,10 +6,10 @@ In this practical, you will learn the stepd for data quality assessment and cont
 ## Why do we need the QC?
 Study design, sample quality, and errors in genotype calling can introduce systematic biases into GWAS, leading to spurious associations. A thorough QC can help us identify samples and markers that should be removed prior to association analysis in order to minimize false-positive and false-negative associations.
 
-Here we assume that the study design has been conducted appropriately and basic QC to genotypes (e.g. setting genotypes of lower confidence score to missing genotypes in GenCall) has been performed on variants called from probe intensity data. 
+Here we assume that the study design has been conducted appropriately and basic QC to genotypes (e.g. QC based on GenTrain score in Illumina GenomeStudio or rare SNPs calling using zCall) has been performed after clustering and calling from probe intensity data. 
 
 ## The QC protocol: from Sample QC to Variant QC 
-The QC protocol of a GWAS is usually split into two broad categories, `Sample QC` and `Variant QC`. Sample QC is usually done prior to Variant QC in order to maximise the number of markers remained in the study.
+The QC protocol of a GWAS is split into two broad categories, `Sample QC` and `Variant QC`. Sample QC is usually done prior to Variant QC in order to maximise the number of markers remained for association analysis.
 
 ### Sample QC
 It consists of at least five steps:
