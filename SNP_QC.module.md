@@ -22,7 +22,7 @@ head(het)
 ### Variant QC
 - Missingness
 - Hardy-Weinberg equilibrium
-- Minor allele frequency (MAF)
+- Minor allele frequency (MAF): Rare variants are difficult to call and with higher genotyping errors
 
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
