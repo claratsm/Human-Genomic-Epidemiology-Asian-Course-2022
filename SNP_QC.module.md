@@ -25,16 +25,19 @@ head(het)
 - Minor allele frequency (MAF): Rare variants are difficult to call and with higher genotyping errors
 
 ## Step 0: Download the genotype data
-First, we create a directory named `QC` for this practical section
-`mkdir QC`
+First, we can create a directory named `QC` for this practical section
 
-DIR=<path to your directory>
+```bash
+mkdir ~/QC
+cd ~/QC
+```
 
-(eg DIR=~/QC)
-
+Next we downolad the raw genotype data and save it to the current directory
+```bash
 FILE=VSS
 
-cp /data/Workshop2_QC/Step1/VSS.* $DIR/
+wget xxx
+```
 
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
