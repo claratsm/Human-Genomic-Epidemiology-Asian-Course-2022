@@ -24,6 +24,11 @@ head(het)
 - Hardy-Weinberg equilibrium
 - Minor allele frequency (MAF): Rare variants are difficult to call and with higher genotyping errors
 
+## Prerequisites
+For this tutorials on sample and variant QC, we need the following software that have been installed in this VM
+- `(PLINK)[https://www.cog-genomics.org/plink/]` 1.9 beta for genotype data management and 
+- `R` for visualization of different QC measures
+
 ## Step 0: Download the genotype data
 First, we can create a directory named `QC` for this practical section
 
