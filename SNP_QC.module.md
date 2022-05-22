@@ -37,12 +37,13 @@ mkdir ~/QC
 cd ~/QC
 ```
 
-- Download the raw genotype data and save it to the current directory
+- Download the raw genotype data in binary format and save it to the current directory
 ```bash
 FILEURL="http://"
 
 wget $FILEURL
 ```
+
 
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
