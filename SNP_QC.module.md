@@ -25,7 +25,7 @@ head(het)
 - Minor allele frequency (MAF): Rare variants are difficult to call and with higher genotyping errors
 
 ## Prerequisites
-For this tutorials on sample and variant QC, we need the following software that have been installed in this VM
+For sample and variant QC, we need the following software that have been installed in this VM
 - `PLINK` (1.9 beta)[https://www.cog-genomics.org/plink/] for genotype data management and 
 - `R` for visualization of different QC measures
 
