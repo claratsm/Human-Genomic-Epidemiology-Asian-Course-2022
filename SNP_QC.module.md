@@ -26,18 +26,18 @@ head(het)
 
 ## Prerequisites
 For sample and variant QC, we need the following software that have been installed in this VM
-- `PLINK`[1.9 beta](https://www.cog-genomics.org/plink/) for genotype data management and 
+- `PLINK`[1.9 beta](https://www.cog-genomics.org/plink/) for genotype data management 
 - `R` for visualization of different QC measures
 
 ## Step 0: Download the genotype data
-First, we can create a directory named `QC` for this practical section
+- First, create a directory named `QC` for this practical section
 
 ```bash
 mkdir ~/QC
 cd ~/QC
 ```
 
-Next we download the raw genotype data and save it to the current directory
+- Download the raw genotype data and save it to the current directory
 ```bash
 FILE=VSS
 
