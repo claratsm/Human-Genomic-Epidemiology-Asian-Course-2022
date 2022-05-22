@@ -39,9 +39,9 @@ cd ~/QC
 
 - Download the raw genotype data and save it to the current directory
 ```bash
-FILE=VSS
+FILEURL="http://"
 
-wget xxx
+wget $FILEURL
 ```
 
 ## Dataset
