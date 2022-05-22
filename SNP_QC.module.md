@@ -18,6 +18,11 @@ The QC protocol of a GWAS is split into two broad categories, `Sample QC` and `V
 het<-read.table("test.het")
 head(het)
 ```
+
+### Variant QC
+- Missingness
+- Hardy-Weinberg equilibrium
+
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
 - SNP extracted from Illumina Asian Screening array
