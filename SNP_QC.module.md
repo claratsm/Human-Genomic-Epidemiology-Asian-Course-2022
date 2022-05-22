@@ -22,10 +22,12 @@ head(het)
 ### Variant QC
 - Missingness
 - Hardy-Weinberg equilibrium
+- Minor allele frequency (MAF)
 
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
 - SNP extracted from Illumina Asian Screening array
+
 
 ### Variant pruning
 To avoid bias in xxxx, we first perform LD pruning to remove SNPs with moderate to strong LD.
