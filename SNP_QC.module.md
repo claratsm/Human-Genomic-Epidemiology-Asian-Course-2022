@@ -24,6 +24,18 @@ head(het)
 - Hardy-Weinberg equilibrium
 - Minor allele frequency (MAF): Rare variants are difficult to call and with higher genotyping errors
 
+## Step 0: Download the genotype data
+First, we create a directory named `QC` for this practical section
+`mkdir QC`
+
+DIR=<path to your directory>
+
+(eg DIR=~/QC)
+
+FILE=VSS
+
+cp /data/Workshop2_QC/Step1/VSS.* $DIR/
+
 ## Dataset
 - Genotyping data simulated from 1000 Genomes East Asian population
 - SNP extracted from Illumina Asian Screening array
