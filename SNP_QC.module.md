@@ -32,7 +32,7 @@ mkdir ~/QC
 cd ~/QC
 ```
 
-Next we downolad the raw genotype data and save it to the current directory
+Next we download the raw genotype data and save it to the current directory
 ```bash
 FILE=VSS
 
