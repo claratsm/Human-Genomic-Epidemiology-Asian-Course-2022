@@ -26,7 +26,7 @@ head(het)
 
 ## Prerequisites
 For sample and variant QC, we need the following software that have been installed in this VM
-- `[PLINK](https://www.cog-genomics.org/plink/)` 1.9 beta for genotype data management and 
+- `PLINK`[1.9 beta](https://www.cog-genomics.org/plink/) for genotype data management and 
 - `R` for visualization of different QC measures
 
 ## Step 0: Download the genotype data
