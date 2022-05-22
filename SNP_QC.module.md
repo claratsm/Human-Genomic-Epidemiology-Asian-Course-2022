@@ -12,7 +12,8 @@ Here we assume that the study design has been conducted appropriately and basic 
 The QC protocol of a GWAS is split into two broad categories, `Sample QC` and `Variant QC`. Sample QC is usually done prior to Variant QC in order to maximise the number of markers remained for association analysis.
 
 ### Sample QC
-It consists of at least five steps:
+- Missingness. High missingness indicates poor clustering -> Examples of genomeStudio clustering figure
+- 
 ```{r}
 het<-read.table("test.het")
 head(het)
