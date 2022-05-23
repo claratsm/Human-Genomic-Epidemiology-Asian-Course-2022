@@ -60,7 +60,9 @@ wc practical1.ped
 ```bash
 plink --file practical1 --out practical1
 ```
-The FAM file is basically the first 6 columns of the PED file.
+The `--file <prefix>` command is equivalent to `--ped <prefix>.ped --map <predix>.map`
+
+The FAM file stores the pedigree information of the PED file (i.e. the first 6 columns) while the BIM file is the extended MAP file.
 - Let's have a look at the `BIM` file
 ```bash
 head practical1.bim
