@@ -36,7 +36,7 @@ wc -l practical1.map
 #### PLINK text pedigree and genotype file (PED)
 - Let's have a look at the `PED` file
 ```bash
-less -S chr22.1000g.ped
+less -S chr22.1000g.ped   # type 'q' to quit
 ```
 The PED file is a white-space (space or tab) delimited file<br>
 It has no header line, and one line per sample with 2V+6 fields where V is the number of variants. Tthe first six columns are mandatory and are the same as  in a `FAM` file. 
@@ -56,8 +56,17 @@ wc practical1.ped
 ```
 
 ## Step 2: Data conversion in PLINK
-# xxx.bim stores the SNP information
-less -S xxx.bim   #type "q" to quit
+- Read the `practical1` PLINK text fileset and convert to the PLINK binary fileset (`BED / BIM / FAM`)
+```bash
+plink --file practical1 --out practical1
+```
+The FAM file is basically the first 6 columns of the PED file.
+- Let's have a look at the `BIM` file
+```bash
+head practical1.bim
+```
+The first four columns of BIM file are the same as the MAP file while the 5th and 6th columns record the A1 and A2 alleles:
+
 
 # xxx.fam stores the pedigree information for each sample
 less -S xxx.fam
