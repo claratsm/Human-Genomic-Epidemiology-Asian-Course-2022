@@ -21,7 +21,7 @@ wget 'http://github..../practical1.map'
 head practical1.map
 ```
 MAP file stores the variant information and must contain as many markers as are in the PED file.<br>
-It contains no header line and each line describes a single marker and contain 4 columns:
+It contains no header line and each line describes a single marker with 4 columns:
 
 > 1. Chromosome code (1-22, 23/X, 24/Y, 25/XY, 26/MT; '0' indicates unknown)<br>
 > 2. Variant identifier<br>
@@ -38,7 +38,8 @@ wc -l practical1.map
 ```bash
 less -S chr22.1000g.ped
 ```
-The PED file is a white-space (space or tab) delimited file: the first six columns are mandatory:
+The PED file is a white-space (space or tab) delimited file<br>
+It has no header line, and one line per sample. Tthe first six columns are mandatory:
 > 1. Family ID ('FID')<br>
 > 2. Individual ID('IID')<br>
 > 3. Within-family ID of father ('0' if father isn't in dataset)<br>
