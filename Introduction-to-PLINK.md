@@ -39,21 +39,29 @@ wc -l practical1.map
 less -S chr22.1000g.ped
 ```
 The PED file is a white-space (space or tab) delimited file<br>
-It has no header line, and one line per sample. Tthe first six columns are mandatory:
+It has no header line, and one line per sample with 2V+6 fields where V is the number of variants. Tthe first six columns are mandatory and are the same as  in a `FAM` file. 
+
 > 1. Family ID ('FID')<br>
 > 2. Individual ID('IID')<br>
 > 3. Within-family ID of father ('0' if father isn't in dataset)<br>
 > 4. Within-family ID of mother ('0' if mother isn't in dataset)<br>
 > 5. Sex (1=male; 2=female; 0=unknown)<br>
-> 6. Phenotype (1=control; 2=case; -9 / 0=missing)<br>
+> 6. Phenotype (1=control, 2=case, -9 / 0=missing for case-control; numeric for quantitative trait)<br>
+
+The 7th and 8th fields are the alleles for the first variant in the MAP file. The 9th and 10th are allele calls for the second variant and so on.
 
 :green_book: **Q:** How many samples are there?
 ```bash
 wc practical1.ped
 ```
+
+## Step 2: Data conversion in PLINK
 # xxx.bim stores the SNP information
 less -S xxx.bim   #type "q" to quit
 
 # xxx.fam stores the pedigree information for each sample
 less -S xxx.fam
+```bash
 ```
+
+## Step 3: Data management in PLINK
