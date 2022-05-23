@@ -20,7 +20,7 @@ wget 'http://github..../practical1.map'
 ```bash
 head practical1.map
 ```
-MAP file stores the variant information and must contain as many markers as are in the PED file.
+MAP file stores the variant information and must contain as many markers as are in the PED file.<br>
 It contains no header line and each line describes a single marker and contain 4 columns:
 
 > Chromosome code (1-22, 23/X, 24/Y, 25/XY, 26/MT; '0' indicates unknown)<br>
