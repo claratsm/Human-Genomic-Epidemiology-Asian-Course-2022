@@ -100,4 +100,5 @@ plink --bfile practical1_1 --keep FAM1.indiv --out practical1_1.fam1
 ```bash
 plink --bfile practical1_1.22p11 --freq --out practical1_1.22p11
 ```
+You can combine all commands in one line
 
