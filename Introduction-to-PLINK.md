@@ -28,7 +28,7 @@ It contains no header line and each line describes a single marker and contain 4
 > 3. Position in morgans or centimorgans (safe to use dummy value of '0')<br>
 > 4. Base-pair coordinate (1-based)
 
-**Q:** How many SNPs are there?
+:green_book: **Q:** How many SNPs are there?
 ```bash
 wc -l practical1.map
 ```
