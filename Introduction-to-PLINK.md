@@ -46,7 +46,7 @@ The PED file is a white-space (space or tab) delimited file: the first six colum
 > 5. Sex (1=male; 2=female; 0=unknown)<br>
 > 6. Phenotype (1=control; 2=case; -9 / 0=missing)<br>
 
-**Q:** How many samples are there?
+<span style="color:blue">**Q:** How many samples are there?</span>
 ```bash
 wc practical1.ped
 ```
