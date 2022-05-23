@@ -4,12 +4,16 @@
 In this practical, you will learn how to use PLINK to manage genotyping data.
 
 ## Step 1: Understand the input data formats in PLINK
-- First, create a working directory named `practical1`
+- First, create a working directory named `practical1` and change to the directory
 ```bash
 mkdir practical1
 cd practical1
 ```
-- Download the data into 
+- Download the genotype data in PLINK `PED / MAP` formats into the directory
+```bash
+wget 'http://github..../chr22.1000g.ped'
+wget 'http://github..../chr22.1000g.map'
+```
 - Let's have a look at the files
 ```bash
 ```
