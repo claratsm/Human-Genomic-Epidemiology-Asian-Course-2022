@@ -4,19 +4,19 @@
 In this practical, you will learn how to use PLINK to manage genotyping data.
 
 ## Step 1: Understand the input data formats in PLINK
-- First, create a working directory named `practical1` and change to the directory
+First, create a working directory named `practical1` and change to the directory
 ```bash
 mkdir practical1
 cd practical1
 ```
-- Download the genotype data in regular PLINK text file format (`PED / MAP`) into the directory
+Download the genotype data in regular PLINK text file format (`PED / MAP`) into the directory
 ```bash
 wget 'http://github..../practical1.ped'
 wget 'http://github..../practical1.map'
 ```
 
 #### PLINK text variant file (MAP)
-- Let's have a look at the variant `MAP` file
+Let's have a look at the variant `MAP` file
 ```bash
 head practical1.map
 ```
@@ -34,7 +34,7 @@ wc -l practical1.map
 ```
 
 #### PLINK text pedigree and genotype file (PED)
-- Let's have a look at the `PED` file
+Let's have a look at the `PED` file
 ```bash
 less -S chr22.1000g.ped   # type 'q' to quit
 ```
@@ -56,18 +56,26 @@ wc practical1.ped
 ```
 
 ## Step 2: Data conversion in PLINK
-- Read the `practical1` PLINK text fileset and convert to the PLINK binary fileset (`BED / BIM / FAM`)
+Read the `practical1` PLINK text fileset and convert to the PLINK binary fileset (`BED / BIM / FAM`)
 ```bash
-plink --file practical1 --out practical1
+plink --file practical1 --out practical1.1
 ```
-The `--file <prefix>` command is equivalent to `--ped <prefix>.ped --map <predix>.map`
+The command `--file **practical1**` reads in **practical1**.ped and **practical1**.map and is equivalent to `--ped **practical1**.ped --map **practical1**.map`. It output the PLINK binary files with prefix of **practical1.1**
 
-The FAM file stores the pedigree information of the PED file (i.e. the first 6 columns) while the BIM file is the extended MAP file.
-- Let's have a look at the `BIM` file
+> practical1.1.bed (binary file; not human readable)<br>
+> practical1.1.bim <br>
+> practical1.1.fam <br>
+
+The FAM file stores the pedigree information of the PED file (i.e. the first 6 columns).<br>
+The BIM file is the extended MAP file with first four columns same as the MAP file. The 5th and 6th columns record the A1 and A2 alleles:<br>
+
+> 5. Allele 1 (A1; corresponding to the minor allele by default)<br>
+> 6. Allele 2 (A2; corresponding to the major allele by default)<br>
+
 ```bash
 head practical1.bim
 ```
-The first four columns of BIM file are the same as the MAP file while the 5th and 6th columns record the A1 and A2 alleles:
+The 
 
 
 # xxx.fam stores the pedigree information for each sample
