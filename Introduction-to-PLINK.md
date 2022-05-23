@@ -58,9 +58,12 @@ wc practical1.ped
 ## Step 2: Data conversion in PLINK
 Read the `practical1` PLINK text fileset and convert to the PLINK binary fileset (`BED / BIM / FAM`)
 ```bash
-plink --file practical1 --out practical1.1
+plink **--file practical1** --out practical1.1
+
+## Equivalent to 
+# plink **--ped practical1.ped --map practical1.map** --out practical1.1`
 ```
-The command `--file **practical1**` reads in **practical1**.ped and **practical1**.map and is equivalent to `--ped **practical1**.ped --map **practical1**.map`. It output the PLINK binary files with prefix of **practical1.1**
+The command `--file **practical1**` reads in **practical1**.ped and **practical1**.map and outputs the PLINK binary files with prefix of **practical1.1**
 
 > practical1.1.bed (binary file; not human readable)<br>
 > practical1.1.bim <br>
@@ -69,18 +72,16 @@ The command `--file **practical1**` reads in **practical1**.ped and **practical1
 The FAM file stores the pedigree information of the PED file (i.e. the first 6 columns).<br>
 The BIM file is the extended MAP file with first four columns same as the MAP file. The 5th and 6th columns record the A1 and A2 alleles:<br>
 
-> 5. Allele 1 (**A1**; corresponding to the **minor allele** by default)<br>
+> 5. Allele 1 (**A1**; corresponding to the **minor allele** by default; 0 is monomorphic)<br>
 > 6. Allele 2 (**A2**; corresponding to the **major allele** by default)<br>
 
+Let's have a look at the `BIM` file
 ```bash
-head practical1.bim
+head practical1.1.bim
 ```
-The 
-
-
-# xxx.fam stores the pedigree information for each sample
-less -S xxx.fam
+Let's have a look at the `FAM` file
 ```bash
+head practical1.1.fam
 ```
 
 ## Step 3: Data management in PLINK
