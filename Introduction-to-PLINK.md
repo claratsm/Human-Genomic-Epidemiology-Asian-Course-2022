@@ -77,9 +77,8 @@ The BIM file is the extended MAP file with first four columns same as the MAP fi
 > 5. Allele 1 (**A1**; corresponding to the **minor allele** by default; 0 is monomorphic)<br>
 > 6. Allele 2 (**A2**; corresponding to the **major allele** by default)<br>
 
-Let's have a look at the `FAM` and `BIM` files
+📗 Q: What is the minor allele of the second SNP?
 ```bash
-head practical1.1.fam
 head practical1.1.bim
 ```
 
