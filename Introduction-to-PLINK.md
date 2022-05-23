@@ -57,17 +57,17 @@ wc practical1.ped
 
 ## Step 2: Data conversion in PLINK
 Read the `practical1` PLINK text fileset and convert to the PLINK binary fileset (`BED / BIM / FAM`)
-<pre><code>plink <b>--file practical1</b> --make-bed --out practical1.1
+<pre><code>plink <b>--file practical1</b> --make-bed --out practical1_1
 
 ## Equivalent to 
-# plink <b>--file practical1</b> --out practical1.1
-# plink <b>--ped practical1.ped --map practical1.map</b> --make-bed --out practical1.1`
+# plink <b>--file practical1</b> --out practical1_1
+# plink <b>--ped practical1.ped --map practical1.map</b> --make-bed --out practical1_1`
 </code></pre>
-The command `--file **practical1**` reads in **practical1**.ped and **practical1**.map and outputs the PLINK binary files with prefix of **practical1.1**
+The command `--file **practical1**` reads in **practical1**.ped and **practical1**.map and outputs the PLINK binary files with prefix of **practical1_1**
 
-> practical1.1.bed (binary file; not human readable)<br>
-> practical1.1.bim <br>
-> practical1.1.fam <br>
+> practical1_1.bed (binary file; not human readable)<br>
+> practical1_1.bim <br>
+> practical1_1.fam <br>
 
 --> Paste and explain the log here <---
 
@@ -77,18 +77,25 @@ The BIM file is the extended MAP file with first four columns same as the MAP fi
 > 5. Allele 1 (**A1**; corresponding to the **minor allele** by default; 0 is monomorphic)<br>
 > 6. Allele 2 (**A2**; corresponding to the **major allele** by default)<br>
 
-📗 Q: What is the minor allele of the second SNP?
-```bash
-head practical1.1.bim
+:closed_book: Q: What is the minor allele of the second SNP?
+<details>
+  <summary>Try by yourself first</summary>
+  <pre>head practical1_1.bim</pre>
+</details>
 ```
 
 ## Step 3: Data management in PLINK
-
-
+- Extracting or excluding variants
+- by chromosomal position
+- by SNP(s)
 ```bash
-plink --bfile practical1.1 --chr 22 --from-bp xxx --to-bp xxx --make-bed --out practical1.1.22p11
+plink --bfile practical1_1 --chr 22 --from-bp xxx --to-bp xxx --make-bed --out practical1_1.22p11
+```
+- Extracting or keeping samples
+```bash
+plink --bfile practical1_1 --keep FAM1.indiv --out practical1_1.fam1
+```
+```bash
+plink --bfile practical1_1.22p11 --freq --out practical1_1.22p11
 ```
 
-```bash
-plink --bfile practical1.1.22p11 --freq --out practical1.1.22p11
-```
