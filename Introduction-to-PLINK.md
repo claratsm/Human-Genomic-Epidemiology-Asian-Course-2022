@@ -1,7 +1,9 @@
-Objectives
+# Introduction to PLINK
+
+## Objectives
 In this practical, you will learn how to use PLINK for managing genotyping data.
 
-Step 1: Understand the input data formats in PLINK
+## Step 1: Understand the input data formats in PLINK
 - First, create a working directory named `practical1`
 ```bash
 mkdir practical1
