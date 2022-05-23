@@ -9,7 +9,7 @@ In this practical, you will learn how to use PLINK to manage genotyping data.
 mkdir practical1
 cd practical1
 ```
-- Download the genotype data in PLINK file format (`PED / MAP`) into the directory
+- Download the genotype data in regular PLINK text file format (`PED / MAP`) into the directory
 ```bash
 wget 'http://github..../chr22.1000g.ped'
 wget 'http://github..../chr22.1000g.map'
@@ -18,6 +18,13 @@ wget 'http://github..../chr22.1000g.map'
 ```bash
 head chr22.1000g.map
 ```
+MAP file stores the variant information and is usually accompanied with a (`PED`) pedigree + genotype file.
+A text file with no header line, and one line per variant with the following 3-4 fields:
+> Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT'; '0' indicates unknown) or name
+> Variant identifier
+> Position in morgans or centimorgans (safe to use dummy value of '0')
+> Base-pair coordinate (1-based; limited to 231-2)
+
   - How many SNPs are there?
 ```bash
 wc -l chr22.1000g.map
