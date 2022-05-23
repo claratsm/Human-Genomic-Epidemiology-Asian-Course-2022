@@ -57,7 +57,7 @@ wc practical1.ped
 
 ## Step 2: Data conversion in PLINK
 Read the `practical1` PLINK text fileset and convert to the PLINK binary fileset (`BED / BIM / FAM`)
-```bash
+```
 plink **--file practical1** --out practical1.1
 
 ## Equivalent to 
