@@ -26,7 +26,6 @@ Each line of the MAP file describes a single marker and contain 4 columns:
 > Variant identifier
 > 
 > Position in morgans or centimorgans (safe to use dummy value of '0')
-> 
 > Base-pair coordinate (1-based; limited to 231-2)
 
   - How many SNPs are there?
