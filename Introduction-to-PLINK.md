@@ -14,8 +14,16 @@ cd practical1
 wget 'http://github..../chr22.1000g.ped'
 wget 'http://github..../chr22.1000g.map'
 ```
-- Let's have a look at the files
+- Let's have a look at the variant file (`MAP`)
 ```bash
+head chr22.1000g.map
+```
+  - How many SNPs are there?
+```bash
+wc -l chr22.1000g.map
+```
+```bash
+less -S chr22.1000g.ped
 ```
 # xxx.bim stores the SNP information
 less -S xxx.bim   #type "q" to quit
