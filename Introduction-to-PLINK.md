@@ -82,7 +82,6 @@ The BIM file is the extended MAP file with first four columns same as the MAP fi
   <summary>Try by yourself first</summary>
   <pre>head practical1_1.bim</pre>
 </details>
-```
 
 ## Step 3: Data management in PLINK
 - Extracting or excluding variants
