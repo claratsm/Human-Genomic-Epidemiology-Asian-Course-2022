@@ -80,7 +80,8 @@ The BIM file is the extended MAP file with first four columns same as the MAP fi
 :closed_book: Q: What is the minor allele of the second SNP?
 <details>
   <summary>Try by yourself first</summary>
-  <pre>head practical1_1.bim</pre>
+  <pre>head -n 2 practical1_1.bim</pre>
+  <pre>head -n 2 practical1_1.bim | cut -f 5 </pre>
 </details>
 
 ## Step 3: Data management in PLINK
