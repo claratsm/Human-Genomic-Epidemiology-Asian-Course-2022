@@ -19,10 +19,14 @@ wget 'http://github..../chr22.1000g.map'
 head chr22.1000g.map
 ```
 MAP file stores the variant information and is usually accompanied with a (`PED`) pedigree + genotype file.
-A text file with no header line, and one line per variant with the following 3-4 fields:
-> Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT'; '0' indicates unknown) or name
+Each line of the MAP file describes a single marker and contain 4 columns:
+
+> Chromosome code (1-22, 23/'X', 24/'Y', 25/'XY', 26/'MT'; '0' indicates unknown)
+> 
 > Variant identifier
+> 
 > Position in morgans or centimorgans (safe to use dummy value of '0')
+> 
 > Base-pair coordinate (1-based; limited to 231-2)
 
   - How many SNPs are there?
