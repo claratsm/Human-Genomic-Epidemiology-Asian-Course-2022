@@ -14,6 +14,8 @@ cd practical1
 wget 'http://github..../chr22.1000g.ped'
 wget 'http://github..../chr22.1000g.map'
 ```
+
+#### PLINK text variant file (MAP)
 - Let's have a look at the variant file (`MAP`)
 ```bash
 head chr22.1000g.map
@@ -30,6 +32,9 @@ Each line of the MAP file describes a single marker and contain 4 columns:
 ```bash
 wc -l chr22.1000g.map
 ```
+
+#### PLINK text pedigree file (PED)
+- Let's have a look at the pedigree and genotype file (`PED`)
 ```bash
 less -S chr22.1000g.ped
 ```
