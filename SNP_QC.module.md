@@ -1,31 +1,27 @@
 # Sample-based and Variant-based Quality Control (QC)
 
 ## Objectives
-In this practical, you will learn the stepd for data quality assessment and control that are typically carried out in genome wide association studies (GWAS).
+In this practical, you will learn the basic steps of data quality assessment and perform QC on genotype data that are typically carried out in genome wide association studies (GWAS).
 
-## Why do we need the QC?
-Study design, sample quality, and errors in genotype calling can introduce systematic biases into GWAS, leading to spurious associations. A thorough QC can help us identify samples and markers that should be removed prior to association analysis in order to minimize false-positive and false-negative associations.
+## Why do we need the QC on GWAS data?
+Suboptimal study design, poor sample quality, and errors in genotype calling can introduce systematic biases into GWAS, leading to spurious associations. A thorough QC can help us identify samples and variants that should be removed prior to association analysis to minimize false-positive and false-negative associations.
 
 Here we assume that the study design has been conducted appropriately and basic QC to genotypes (e.g. QC based on GenTrain score in Illumina GenomeStudio or rare SNPs calling using zCall) has been performed after clustering and calling from probe intensity data. 
 
 ## The QC protocol: from Sample QC to Variant QC 
-The QC protocol of a GWAS is split into two broad categories, `Sample QC` and `Variant QC`. Sample QC is usually done prior to Variant QC in order to maximise the number of markers remained for association analysis.
+The QC protocol for GWAS typically split into two broad categories, `Sample QC` and `Variant QC`. Sample QC is usually done prior to Variant QC in order to maximise the number of variants remained for association analysis.
 
 ### Sample QC
 - Missingness. High missingness indicates poor clustering -> Examples of genomeStudio clustering figure
 - 
-```{r}
-het<-read.table("test.het")
-head(het)
-```
 
 ### Variant QC
 - Missingness
-- Hardy-Weinberg equilibrium
-- Minor allele frequency (MAF): Rare variants are difficult to call and with higher genotyping errors
+- Violation of Hardy-Weinberg equilibrium
+- Minor allele frequency (MAF): Rare variants are difficult to call and usually have higher genotyping errors
 
 ## Prerequisites
-For sample and variant QC, we need the following software that have been installed in this VM
+For sample and variant QC, we need the following software that is pre-installed in this VM
 - `PLINK`[1.9 beta](https://www.cog-genomics.org/plink/) for genotype data management 
 - `R` for visualization of different QC measures
 
