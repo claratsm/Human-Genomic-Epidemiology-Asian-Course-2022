@@ -69,8 +69,8 @@ The command `--file **practical1**` reads in **practical1**.ped and **practical1
 The FAM file stores the pedigree information of the PED file (i.e. the first 6 columns).<br>
 The BIM file is the extended MAP file with first four columns same as the MAP file. The 5th and 6th columns record the A1 and A2 alleles:<br>
 
-> 5. Allele 1 (A1; corresponding to the minor allele by default)<br>
-> 6. Allele 2 (A2; corresponding to the major allele by default)<br>
+> 5. Allele 1 (**A1**; corresponding to the **minor allele** by default)<br>
+> 6. Allele 2 (**A2**; corresponding to the **major allele** by default)<br>
 
 ```bash
 head practical1.bim
