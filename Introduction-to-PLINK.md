@@ -15,7 +15,7 @@ wget 'http://github..../practical1.ped'
 wget 'http://github..../practical1.map'
 ```
 
-#### PLINK text variant file (MAP)
+#### - PLINK text variant file (MAP)
 Let's have a look at the variant `MAP` file
 ```bash
 head practical1.map
@@ -33,7 +33,7 @@ It contains no header line and each line describes a single marker with 4 column
 wc -l practical1.map
 ```
 
-#### PLINK text pedigree and genotype file (PED)
+#### - PLINK text pedigree and genotype file (PED)
 Let's have a look at the `PED` file
 ```bash
 less -S chr22.1000g.ped   # type 'q' to quit
